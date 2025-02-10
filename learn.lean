@@ -56,3 +56,5 @@ def five0 := ("five", 0)
 
 abbrev PetName : Type := String ⊕ String
 def pn : PetName := Sum.inr "Rex"
+
+#eval (⟨1, 2⟩ : Point)
