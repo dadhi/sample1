@@ -58,3 +58,12 @@ abbrev PetName : Type := String ⊕ String
 def pn : PetName := Sum.inr "Rex"
 
 #eval (⟨1, 2⟩ : Point)
+
+def xxx : 1 + 1 = 2 := rfl
+#check xxx
+
+def getThird {α : Type} (xs : List α) (checkLength: xs.length > 2) : α := xs[2]
+def heys := ["a", "2", "3"]
+
+#eval getThird heys (by decide)
+-- #eval getThird heys (by simp) not provable for some
